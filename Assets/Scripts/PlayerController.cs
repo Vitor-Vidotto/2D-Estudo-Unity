@@ -69,7 +69,6 @@ public class PlayerController : MonoBehaviour
         }
         if(viradocheck>0){
             virado = false;
-            Debug.Log("DesVirou");
         }
         if(viradocheck<0){
             virado = true;
@@ -126,5 +125,11 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = Vector3.zero;
         }
         top = !top;
+    }
+    public void MoreJump()
+    {
+        Debug.Log("Double Jump");
+        extraJumpValue++;
+        return;
     }
 }
