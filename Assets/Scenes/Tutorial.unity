@@ -2106,6 +2106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubePrefab: {fileID: 606986923500268140, guid: 6353f25062a2280478d6fc46522dec67, type: 3}
+  coinPrefab: {fileID: 1639656145948881449, guid: 6685c177977e8b44aab46154734e093c, type: 3}
   maxHealth: 100
 --- !u!1 &1996175424
 GameObject:

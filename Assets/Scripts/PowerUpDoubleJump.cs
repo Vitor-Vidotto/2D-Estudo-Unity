@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Armadilha : MonoBehaviour
+public class PowerUpDoubleJump : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public int extrajmp = 1;
+
     void Start()
     {
         
@@ -17,7 +20,8 @@ public class Armadilha : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("Player")){
-            other.gameObject.GetComponent<PlayerLife>().ReceberDanoArmadilha();
+            other.gameObject.GetComponent<PlayerController>().MoreJump();
+            Destroy(gameObject);
         }
     }
 }

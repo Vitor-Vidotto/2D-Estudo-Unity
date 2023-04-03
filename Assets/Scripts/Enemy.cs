@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {   
     public GameObject cubePrefab;
+    public GameObject coinPrefab;
 
     public int maxHealth = 100;
     int currentHealth;
@@ -31,6 +32,9 @@ public class Enemy : MonoBehaviour
     void die()
     {
         Instantiate(cubePrefab, transform.position, Quaternion.identity);
+        rb2D.gravityScale -= -1;
+        GetComponent<Collider2D>().enabled = true;
+        Instantiate(coinPrefab, transform.position, Quaternion.identity);
         rb2D.gravityScale -= -1;
         GetComponent<Collider2D>().enabled = true;
         Destroy(gameObject);

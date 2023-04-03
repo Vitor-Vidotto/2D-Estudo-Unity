@@ -20,8 +20,16 @@ public class PlayerLife : MonoBehaviour
     {
         
     }
-    public void ReceberDano(){
-        vidaAtual -= 1;
+    public void ReceberDanoInimigo(){
+        vidaAtual -= 20;
+        HitSound.Play ();
+        if(vidaAtual <= 0)
+        {
+            SceneManager.LoadScene("Death");
+        }
+    }
+    public void ReceberDanoArmadilha(){
+        vidaAtual -= 10;
         HitSound.Play ();
         if(vidaAtual <= 0)
         {
